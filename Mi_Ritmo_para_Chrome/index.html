@@ -179,14 +179,14 @@ window.OneSignalDeferred.push(async function(OneSignal){
  try{
   await OneSignal.init({
    appId:'41e2668b-8b84-4f48-8199-de7279238d30',
-   serviceWorkerPath:'sw.js',
+   serviceWorkerPath:'/mi-ritmo/Mi_Ritmo_para_Chrome/sw.js',
    serviceWorkerParam:{scope:'/mi-ritmo/Mi_Ritmo_para_Chrome/'},
    notifyButton:{enable:true},
    allowLocalhostAsSecureOrigin:false
   });
   const el=document.getElementById('pushEstado');
   if(el)el.textContent=OneSignal.Notifications.permission?'🔔 Chrome tiene permiso. Falta probar el envío desde OneSignal.':'Pulsa el botón para permitir las notificaciones de Momo.';
- }catch(e){console.error('OneSignal:',e);const el=document.getElementById('pushEstado');if(el)el.textContent='OneSignal no se pudo conectar: '+e.message;}
+ }catch(e){console.error('OneSignal:',e);const el=document.getElementById('pushEstado');if(el)el.textContent='No se pudieron activar las notificaciones: '+e.message;}
 });
 
 </script></body></html>
