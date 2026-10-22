@@ -1,1 +1,9 @@
-Mi Ritmo - versión web instalable. Para instalar desde Chrome hay que publicar estos archivos en HTTPS. Abrir index.html directamente no instala la app. Opción gratuita: GitHub Pages (repositorio público), subir los archivos descomprimidos y activar Settings > Pages > Deploy from a branch > main /root. Abre la URL publicada en Chrome Android > menú de tres puntos > Instalar aplicación. Los registros se guardan localmente; las fotos NO persisten tras cerrar; avisos solo con la app abierta. No se envían datos de salud a GitHub. Exporta tus registros regularmente.
+Mi Ritmo 0.8 - OneSignal Web Push
+
+Sube TODOS los archivos de esta carpeta a Mi_Ritmo_para_Chrome en GitHub, especialmente index.html y sw.js. NO subas index(1).html.
+
+La configuración de OneSignal usa App ID 41e2668b-8b84-4f48-8199-de7279238d30 y el worker compartido sw.js con alcance /mi-ritmo/Mi_Ritmo_para_Chrome/.
+
+En Chrome Android, abre Mi Ritmo > Ajustes > Activar notificaciones de Momo, acepta permisos. Comprueba que OneSignal detecta una suscripción y envía un mensaje de prueba.
+
+IMPORTANTE: esto permite recibir push con la app cerrada, pero NO programa por sí solo recordatorios automáticos de comidas, agua y pausas. Para esos avisos hay que configurar envíos programados o backend. No borres los datos del sitio: se perderían los registros locales.
